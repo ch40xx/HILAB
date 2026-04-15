@@ -1,0 +1,6 @@
+__pycache__/
+*.json*
+*.db*
+*.html*
+*.pdf*
+*.log*
