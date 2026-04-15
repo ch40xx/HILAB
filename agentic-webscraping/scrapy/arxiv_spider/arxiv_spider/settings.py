@@ -63,7 +63,7 @@ ITEM_PIPELINES = {
     "arxiv_spider.pipelines.ArxivSpiderPipeline": 300,
 }
 
-FILES_STORE = "arxiv_pdf"
+FILES_STORE = "downloads"
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

@@ -10,7 +10,9 @@ from scrapy.pipelines.files import FilesPipeline
 
 class ArxivSpiderPipeline(FilesPipeline):
     def file_path(self, request, response=None, info=None, *, item=None):
-        arxiv_id = item.get('arxiv_id', 'unknown')
+        arxiv_id = item.get('paper_id', 'unknown')
         title = item.get('title', 'unknown')[:100]
+
         safe_title = "".join(c if c.isalnum() or c in " -_" else "_" for c in title)
+
         return f"{arxiv_id}_{safe_title}.pdf"
