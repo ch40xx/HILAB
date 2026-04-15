@@ -26,7 +26,7 @@ class ArxivPDFSpider(scrapy.Spider):
     def open_spider(self):
         self.conn = sqlite3.connect("papers.db")
         
-    def start_requests(self):
+    async def start(self):
 
         self.open_spider()
         rows = self.conn.execute("""
